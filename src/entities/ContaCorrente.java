@@ -2,19 +2,12 @@ package entities;
 
 public class ContaCorrente extends Conta{
 
-    public ContaCorrente(double saldo) {
-        super(saldo);
+    public ContaCorrente(Cliente cliente) {
+        super(cliente);
     }
-    @Override
-    public void sacar(double valor){
 
-    }
     @Override
-    public void depositar(double valor){
-
-    }
-    @Override
-    public void transferir(Conta conta, double valor) {
-
+    public void imprimirExtrato() {
+        super.imprimirInfosComuns();
     }
 }
