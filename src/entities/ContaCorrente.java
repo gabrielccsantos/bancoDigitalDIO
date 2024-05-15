@@ -1,31 +1,20 @@
 package entities;
 
-public class ContaCorrente {
-    private int agencia;
-    private int numero;
-    private double saldo;
+public class ContaCorrente extends Conta{
 
-    public int getAgencia() {
-        return agencia;
+    public ContaCorrente(double saldo) {
+        super(saldo);
     }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public double getSaldo() {
-        return saldo;
-    }
-
-    public void sacar(){
+    @Override
+    public void sacar(double valor){
 
     }
-
-    public void depositar(){
+    @Override
+    public void depositar(double valor){
 
     }
-
-    public void transferir(){
+    @Override
+    public void transferir(Conta conta, double valor) {
 
     }
 }
