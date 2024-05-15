@@ -1,16 +1,21 @@
 package entities;
 
 public abstract class Conta {
-    private int agencia;
-    private int numero;
-    private double saldo;
+    private static final int AGENCIA = 1;
+    private static int SEQUENCIAL = 1;
+
+    protected int agencia;
+    protected int numero;
+    protected double saldo;
 
     public Conta(double saldo) {
+        this.agencia = Conta.AGENCIA;
+        this.numero = ++SEQUENCIAL;
         this.saldo = saldo;
     }
 
     public int getAgencia() {
-        return agencia;
+        return AGENCIA;
     }
 
     public int getNumero() {
